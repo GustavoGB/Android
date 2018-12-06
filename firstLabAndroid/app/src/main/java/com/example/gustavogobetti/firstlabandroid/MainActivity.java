@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     //Button Lbutton = findViewById(R.id.left_button);
     //Method for buttonClicked--
     //1step
+
+
     public void buttonClicked(View view) {
 
         if (view.getId() == R.id.left_button){
