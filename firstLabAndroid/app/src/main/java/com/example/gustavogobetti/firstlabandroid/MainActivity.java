@@ -13,77 +13,63 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+    private int counter = 0;
+    private String[] arrayName   = {"Green", "Blue", "Red", "Black", "White", "Orange", "Pink", "Purple", "Brown"};
+    private String[] arrayColors = {"#00FF00", "#0000FF", "#FF0000", "#000000", "#FFFFFF", "#FF4E00", "#FF00FF", "#800080", "#6A280B"};
+    private Button leftBtn;
+    private Button rightBtn;
+    private TextView mColorName;
+    private TextView mScore;
+    private int rightColor;
+    private int leftColor;
+    private int answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        leftBtn = findViewById(R.id.left_button);
+        rightBtn = findViewById(R.id.right_button);
+        mColorName = findViewById(R.id.colorName);
+        mScore     = findViewById(R.id.score) ;
     }
-
 
     private void toast(String message){
-        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
-//
-//    //RButton
-//    Button Rbutton = findViewById(R.id.right_button);
-//    //Lbutton
-//    Button Lbutton = findViewById(R.id.left_button);
-    //RandomIndex
-    //public static final Random RANDOM = new Random();
-    //Set the view as a ROOT
-
-
-    //Create a Tuple with the value of the Hexadecimal of the color and the name of it.
-    // 2 Strings instead of the Tuple
-    //String[] arrayName   = {"Green","Blue","Red","Black","White","Orange", "Pink", "Purple", "Brown"};
-    //String[] arrayColors = {"#00FF00","#0000FF","#FF0000","000000","#FF0000", "#FF4E00", "#FF00FF", "#800080", "#6A280B"};
-
-
-    ////int [] arrayColors   = {Color.GREEN,Color.BLUE,Color.RED,Color.BLACK,Color.WHITE,Color.WHITE,Color.GRAY,Color.LTGRAY,Color.DKGRAY,Color.MAGENTA};
-
-    //
-    public int counter = 0;
-
-    //RandomIndex
-    int randomRight = (int) (Math.random()*10);
-    int randomLeft  = (int) (Math.random()*10);
-
-    //Arrays of name and the actual Colors
-    String[] arrayName   = {"Green","Blue","Red","Black","White","Orange", "Pink", "Purple", "Brown"};
-    String[] arrayColors = {"#00FF00","#0000FF","#FF0000","000000","#FF0000", "#FF4E00", "#FF00FF", "#800080", "#6A280B"};
+    public void makeNewQuestion() {
+        rightColor = (int) (Math.random() * arrayColors.length);
+        leftColor  = (int) (Math.random() * arrayColors.length);
+        while (leftColor == rightColor) {
+            leftColor  = (int) (Math.random() * arrayColors.length);
+        }
+        int[] choices = {rightColor, leftColor};
+        answer = choices[(int) (Math.random() * 2)];
+        mColorName.setText(arrayName[answer]);
+        rightBtn.setBackgroundColor(Color.parseColor(arrayColors[rightColor]));
+        leftBtn.setBackgroundColor(Color.parseColor(arrayColors[leftColor]));
+    }
 
     public void buttonClicked(View view) {
-        //Buttons and layout
-        Button Rbutton = findViewById(R.id.right_button);
-        //Lbutton
-        Button Lbutton = findViewById(R.id.left_button);
-        //Color Name Display
-        TextView mColorName = (TextView) findViewById(R.id.colorName);
-        //Score Display
-        TextView mScore     = (TextView) findViewById(R.id.score) ;
-
-
-        //Rbutton.setBackgroundColor(Color.parseColor(arrayName[randomRight]));
-        //Lbutton.setBackgroundColor(Color.parseColor(arrayColors[randomLeft]));
-
-        if (arrayColors[randomRight].equals(arrayName)) {
-            mColorName.setText(arrayColors[randomRight]);
-            mScore.setText(Integer.toString(counter));
-            Rbutton.setBackgroundColor(Color.parseColor(arrayColors[randomRight]));
-            Lbutton.setBackgroundColor(Color.parseColor(arrayColors[randomLeft]));
-            toast("Right!");
-            counter++;
+        if (view.getId() == R.id.right_button) {
+            if (answer == rightColor) {
+                toast("Right!");
+                counter++;
+                mScore.setText("Score : " + counter);
+            } else {
+                toast("Wrong");
+            }
+        } else {
+            if (answer == leftColor) {
+                toast("Right!");
+                counter++;
+                mScore.setText("Score : " + counter);
+            } else {
+                toast("Wrong");
+            }
         }
-        else{
-            mColorName.setText(arrayColors[randomLeft]);
-            Rbutton.setBackgroundColor(Color.parseColor(arrayColors[randomRight]));
-            Lbutton.setBackgroundColor(Color.parseColor(arrayColors[randomLeft]));
-            toast("Wrong");
-        }
+        makeNewQuestion();
     }
-
-
 
 }
