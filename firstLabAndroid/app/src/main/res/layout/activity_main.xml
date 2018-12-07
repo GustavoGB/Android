@@ -31,13 +31,13 @@
 
         <Button
             android:id="@+id/left_button"
-            android:onClick="ButtonClicked"
+            android:onClick="buttonClicked"
             android:background="@color/colorPrimary"
             android:layout_width="100dp"
             android:layout_height="100dp" />
         <Button
             android:id="@+id/right_button"
-            android:onClick="ButtonClicked"
+            android:onClick="buttonClicked"
             android:background="@color/colorAccent"
             android:layout_marginLeft="70dp"
             android:layout_width="100dp"
