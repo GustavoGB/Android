@@ -9,14 +9,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    String[] TAG = new TAG[];
+    String tag = new TAG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d(TAG[], "onStart");
+        Log.d(BATTERY_SERVICE[], "onStart");
     }
 
 

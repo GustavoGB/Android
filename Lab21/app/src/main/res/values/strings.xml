@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Lab2.1</string>
     <string name="text_header">text_header</string>
+    <string name="text_header_reply">text_header_reply</string>
 </resources>
