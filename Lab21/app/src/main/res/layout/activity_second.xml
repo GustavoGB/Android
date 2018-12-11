@@ -6,6 +6,140 @@
     android:layout_height="match_parent"
     tools:context=".secondActivity">
 
+
+    <LinearLayout android:layout_height="4dp"
+        android:layout_width="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#898989"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:text="Shopping List" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FF55FF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Banana" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FF55FF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Shrimp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#5553FF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#5553FF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FF8989"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FF8989"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FF8989"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FF8989"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FF8989"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FF8989"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FF8989"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FF8989"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="" />
+
+
+    <Button android:id="@+id/second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add more Items"
+        />
+    <Button android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show My list"
+
+        />
     <TextView
         android:id="@+id/text_header"
         android:layout_width="wrap_content"
@@ -45,5 +179,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.978" />
 
+</LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
