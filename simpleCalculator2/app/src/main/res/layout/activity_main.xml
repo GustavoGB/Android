@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity"
+              tools:ignore="ExtraText">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD" />
+        <Button
+                android:id="@+id/buttonSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUB" />
+        <Button
+                android:id="@+id/buttonDiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DIV" />
+        <Button
+                android:id="@+id/buttonMult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MULT" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="input number"
+                android:inputType="textPersonName"/>
+
+
+        <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="input number ="
+                android:inputType="textPersonName"/>
+
+        <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Result"
+                android:inputType="textPersonName"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
