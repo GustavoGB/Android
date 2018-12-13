@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">movieApp200</string>
+    <string-array name="movies">
+        <item>Select a movie</item>
+        <item>Catch Me If You Can</item>
+        <item>Fight Club</item>
+        <item>Forrest Gump</item>
+        <item>God Father</item>
+        <item>Good Will Hunting</item>
+        <item>Pulp Fiction</item>
+        <item>The Hangover</item>
+        <item>The Shaw Shank Redemption</item>
+        <item>Titanic</item>
+    </string-array>
+    <string-array name="movies_text_name">
+        <item></item>
+        <item>catch_me_if_you_can</item>
+        <item>fight_club</item>
+        <item>forrest_gump</item>
+        <item>the_godfather</item>
+        <item>good_will_hunting</item>
+        <item>pulp_fiction</item>
+        <item>the_hangover</item>
+        <item>the_shawshank_redemption</item>
+        <item>titanic</item>
+    </string-array>
+</resources>
