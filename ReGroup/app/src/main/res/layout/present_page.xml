@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <ImageView
+            android:id="@+id/ReGroupLogo"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/Regroup"/>
+
+    <TextView
+
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:textStyle="normal"
+            android:textSize="24dp"
+            android:text="Re Group keeps track of your group and make finding your friends in events such a simple thing!
+Create your account right below"
+            android:paddingTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    <ImageButton
+
+            android:maxHeight="2dp"
+            android:maxWidth="2dp"
+            android:id="@+id/haveAccount"
+            android:paddingTop="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <ImageButton
+            android:id="@+id/newAccount"
+            android:paddingTop="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+</LinearLayout>
