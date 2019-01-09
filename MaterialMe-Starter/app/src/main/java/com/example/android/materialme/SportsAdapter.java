@@ -17,6 +17,7 @@
 package com.example.android.materialme;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.ngamolsky.android.materialme.DetailActivity;
 
 import java.util.ArrayList;
 
@@ -86,7 +88,19 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
     /**
      * ViewHolder class that represents each row of data in the RecyclerView
      */
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+        @Override
+        public void onClick(View view) {
+            //Get the Sport object for the item that was clicked
+            Sport  currentSport = mSportsData.get(getAdapterPosition());
+            // Intent with title and image_resource
+            Intent detailIntent = new Intent(mContext, DetailActivity.class);
+            detailIntent.putExtra("Title", currentSport.getTitle());
+            detailIntent.putExtra("image_resource", currentSport.getImageResource());
+            //Start activity
+            mContext.startActivity(detailIntent);
+        }
 
         //Member Variables for the TextViews
         private TextView mTitleText;
@@ -100,10 +114,14 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
         ViewHolder(View itemView) {
             super(itemView);
 
+
             //Initialize the views
             mTitleText = (TextView)itemView.findViewById(R.id.title);
             mInfoText = (TextView)itemView.findViewById(R.id.subTitle);
             mSportsImage = itemView.findViewById(R.id.sportsImage);
+
+            // Set the OnClickListener to the entire view.
+            itemView.setOnClickListener(this);
         }
 
         void bindTo(Sport currentSport){
